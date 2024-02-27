@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" id="id" />
+    <button onclick="reg()">버튼</button>
+
+
+    <script>
+        //script 파일은 다로 넣으시면 됩니다. 편의상 html코드에 넣었습니다.
+        // input에 값을 넣고 버튼을 누르면 reg()함수 호출로 id의 입력값을 받아서 
+        // location.href로 index.html로 id의 값을 보내는 겁니다.
+        const reg = () => {
+            let id = document.getElementById('id').value;
+            location.href=`/index.html?id=${id}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 페이지가 로드 되었을 때 URL값을 받아 id값을 분리하여 값을 찾고 <div id="user_name" 에 text로 값을 넣어주는 겁니다.
+        window.onload = function() {
+            // url값 가져오기
+            let currentURL = window.location.href;
+                console.log(currentURL);
+            // ? 뒤값 가져와서 id값 가져오기
+            let urlParams = new URLSearchParams(window.location.search);
+            let id = urlParams.get('id');
+            console.log(id);
+
+            // textcontent로 id값 넣어주기
+            let userNameDiv = document.getElementById('user_name');
+            userNameDiv.textContent = id;
+        }
+    </script>
+</head>
+<body>
+    여기에 값이 입력 받습니다.
+    <div id="user_name"></div>
+</body>
+</html>
